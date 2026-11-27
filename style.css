@@ -1,0 +1,528 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #dac859;
+    color: #30263b;
+    line-height: 1.6;
+}
+
+:root {
+    --purple: #573477;
+    --dark-purple: #38204f;
+    --light-purple: #f1eafa;
+    --gold: #c5a15a;
+    --white: #ffffff;
+}
+
+/* NAVIGATION */
+header {
+    background: var(#d3c358);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--purple);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    width: 190px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-icon {
+    background: var(--purple);
+    color: white;
+    padding: 7px 12px;
+    border-radius: 8px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #51475a;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(239, 192, 28, 0.50),
+            rgba(177, 145, 26, 0.55)
+        ),
+        url("images/museo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 16px;
+    max-width: 500px;
+    color: #eee6f4;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark-purple);
+    padding: 13px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTIONS */
+.section {
+    padding: 85px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading .eyebrow {
+    color: var(--purple);
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: var(--dark-purple);
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #777080;
+}
+
+/* ABOUT */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about-image {
+    background: var(--light-purple);
+    min-height: 310px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+}
+
+.image-placeholder {
+    text-align: center;
+    color: var(--purple);
+}
+
+.image-placeholder span {
+    font-size: 90px;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    color: var(--dark-purple);
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #777080;
+    margin-bottom: 20px;
+}
+
+.text-link {
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* COLLECTIONS */
+.collections {
+    background: #faf7fd;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.collection-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(50, 30, 70, 0.08);
+    transition: 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-7px);
+}
+
+.collection-placeholder {
+    height: 180px;
+    display: grid;
+    place-items: center;
+    font-size: 65px;
+    background: var(--light-purple);
+}
+
+.card-content {
+    padding: 23px;
+}
+
+.category {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.card-content h3 {
+    color: var(--dark-purple);
+    margin: 8px 0;
+}
+
+.card-content p {
+    color: #777080;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: var(--purple);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* NEWS */
+.news-box {
+    max-width: 750px;
+    margin: auto;
+    background: var(--light-purple);
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.news-box span {
+    font-size: 45px;
+}
+
+.news-box h3 {
+    color: var(--dark-purple);
+    margin: 10px 0;
+}
+
+/* VISIT */
+.visit {
+    background: var(--dark-purple);
+    color: white;
+    text-align: center;
+}
+
+.visit-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.visit h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.visit-content > p:not(.eyebrow) {
+    color: #e2d9eb;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+    background: #241533;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #bdb0ca;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 25px;
+        gap: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 60px 8%;
+    }
+
+    .section {
+        padding: 65px 8%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+}
+
+.navbar {
+    background: #ffffff;
+}
+
+.logo {
+    background: transparent;
+}
+
+.nav-links a:hover {
+    color: #b58b19;
+}
+
+.menu-btn {
+    color: white;
+    background: #392313;
+}
+
+
+/* GOLDEN NAVIGATION BACKGROUND */
+
+header {
+    background: #FFF9E9 ;
+    box-shadow: none;
+}
+
+.navbar {
+    background: transparent;
+}
+
+/* LOGO */
+.logo {
+    background: transparent;
+}
+
+/* MORE OPTIONS BUTTON */
+.menu-btn {
+    background: #dac859;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+
+
+/* ===== MUSEO WEBSITE COLOR THEME ===== */
+
+/* GENERAL BACKGROUND */
+body {
+    background: #FFF9E9;
+    color: #392313;
+}
+
+/* ABOUT SECTION */
+.about {
+    background: #FFF9E9;
+}
+
+.about-text h3,
+.section-heading h2 {
+    color: #392313;
+}
+
+/* COLLECTIONS SECTION */
+.collections {
+    background: #F3E5BD;
+}
+
+.collection-card {
+    background: #FFFCF4;
+}
+
+.collection-placeholder {
+    background: #E8D49A;
+}
+
+/* NEWS SECTION */
+.news {
+    background: #FFF9E9;
+}
+
+.news-box {
+    background: #F3E5BD;
+    color: #392313;
+}
+
+/* VISIT SECTION */
+.visit {
+    background: #392313;
+    color: #FFF9E9;
+}
+
+.visit h2 {
+    color: #F3D77A;
+}
+
+/* BUTTONS */
+.primary-btn,
+.scan-btn {
+    background: #392313;
+    color: #FFFFFF;
+    border: 2px solid #D6B75B;
+}
+
+/* FOOTER */
+footer {
+    background: #24170E;
+    color: #FFF5D5;
+}
+
+/* SECTION LABELS */
+.eyebrow {
+    color: #997019;
+}
+
+/* LINKS */
+.text-link,
+.card-content a {
+    color: #80551C;
+}
+
+
+/* PAGE SWITCHING */
+
+.page-section {
+    display: none;
+}
+
+.page-section.active-page {
+    display: block;
+}
+
+#home.active-page {
+    display: flex;
+}
